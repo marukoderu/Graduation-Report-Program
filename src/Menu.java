@@ -1,5 +1,6 @@
 import students.Students;
 import students.StudentsApp;
+import util.GraduateStatusUtil;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -55,7 +56,14 @@ public class Menu {
             scores.add(score);
         }
 
-        Students student = new Students(studentID, studentName, studentClass, studentDepartment);
+        String averageScore = GraduateStatusUtil.scoreAverage(scores);
+
+        String graduateStatus = GraduateStatusUtil.graduateStatus(averageScore);
+
+        Students student = new Students(studentID, studentName, studentClass, studentDepartment, averageScore, graduateStatus);
+        for (int s : scores) {
+            student.addScore(s);
+        }
         studentsApp.addStudents(student);
 
     }
@@ -75,6 +83,9 @@ public class Menu {
 
         if (studentToEdit != null) {
             System.out.println("1. Edit Name");
+            System.out.println("2. Edit Class");
+            System.out.println("3. Edit Department");
+            System.out.println("4. Edit Scores");
             System.out.println("Select what you want to edit:");
             choice = input.nextInt();
 
@@ -85,12 +96,28 @@ public class Menu {
                     String newName = input.nextLine();
                     studentToEdit.setStudentName(newName);
                     break;
+                case 2:
+                    input.nextLine();
+                    System.out.println("Enter new class:");
+                    String newClass = input.nextLine();
+                    studentToEdit.setStudentClass(newClass);
+                case 3:
+                    input.nextLine();
+                    System.out.println("Enter new department:");
+                    String newDep = input.nextLine();
+                    studentToEdit.setStudentDepartment(newDep);
+                case 4:
+
                 default:
                     System.out.println("Invalid");
             }
         } else {
             System.out.println("Student not found!");
         }
+    }
+
+    public static void editScores(Students students, Scanner input) {
+        
     }
 
     public static void deleteStudent(StudentsApp studentsApp) {
