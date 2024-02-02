@@ -25,9 +25,9 @@ public class GraduateStatusUtil {
         double minAvr = 75.00;
 
         if (average >= minAvr) {
-            return "Passed";
+            return "Lulus";
         } else {
-            return "Failed";
+            return "Tidak Lulus";
         }
     }
 }

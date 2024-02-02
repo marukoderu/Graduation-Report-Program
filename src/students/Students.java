@@ -60,6 +60,10 @@ public class Students {
         scores.add(score);
     }
 
+    public void setScores(ArrayList<Integer> scores) {
+        this.scores = scores;
+    }
+
     public ArrayList<Integer> getScores() {
         return scores;
     }
@@ -84,9 +88,9 @@ public class Students {
         StringBuilder scoresString = new StringBuilder();
         for (int i = 0; i < scores.size(); i++) {
             if (i > 0) {
-                scoresString.append(", "); // Add comma and space before each score (except the first one)
+                scoresString.append(", ");
             }
-            scoresString.append(scores.get(i)); // Append the score
+            scoresString.append(scores.get(i));
         }
         return "ID: " + studentID + " | Name: " + studentName + " | Class: " + studentClass + " | Scores" + scores.toString() + " | Score Average: " + scoreAverage + " | Status: " + isGraduate;
     }
