@@ -55,6 +55,7 @@ public class Menu {
 
         ArrayList<Integer> scores = new ArrayList<>();
         System.out.println("Nilai Mahasiswa (masukkan nilai angka):");
+        System.out.println("*Masukkan angka -1 jika ingin selesai!");
         int score;
         int i = 1;
         while (true) {
@@ -146,6 +147,7 @@ public class Menu {
 
         while (true) {
             System.out.println("Masukkan nilai baru: ");
+            System.out.println("*Masukkan angka -1 jika ingin selesai!");
             score = input.nextInt();
             if (score == -1) {
                 break;
