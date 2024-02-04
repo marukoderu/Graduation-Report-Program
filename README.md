@@ -1,2 +1,1 @@
-# graduatereport
- 
+Graduation Report merupakan sebuah program yang dibuat menggunakan bahasa pemrograman Java dengan menerapkan konsep pemrograman berbasis objek. Projek ini dibuat untuk meningkatkan pemahaman dari pembelajaran mengenai konsep OOP. Cara kerja dari program ini adalah dengan menghitung nilai rata-rata mahasiswa lalu dilakukan pengecekan apakah nilai tersebut memenuhi nilai minimum kelulusan atau tidak. Program ini dilengkapi fitur create, update, read (view) dan delete.
